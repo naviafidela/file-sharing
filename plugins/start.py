@@ -111,7 +111,7 @@ async def start_command(client: Bot, message: Message):
             reply_markup = msg.reply_markup if DISABLE_CHANNEL_BUTTON else None
             try:
                 await message.reply(
-                    text="**LINK NYA ADA DI BAWAH !**",
+                    text="<b>LINK NYA ADA DI BAWAH !</b>",
                     parse_mode=ParseMode.HTML,
                     protect_content=PROTECT_CONTENT,
                     reply_markup=reply_markup,
@@ -125,7 +125,7 @@ async def start_command(client: Bot, message: Message):
                     reply_markup=reply_markup,
                 )
                 await message.reply(
-                    text="__Source : https://asupanmu.live__\n\n________________________________",
+                    text="<i>Source : https://asupanmu.live</i>\n\n________________________________",
                     parse_mode=ParseMode.HTML,
                     protect_content=PROTECT_CONTENT,
                     reply_markup=reply_markup,
