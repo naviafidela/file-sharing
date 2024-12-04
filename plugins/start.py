@@ -110,10 +110,9 @@ async def start_command(client: Bot, message: Message):
 
             reply_markup = msg.reply_markup if DISABLE_CHANNEL_BUTTON else None
             try:
-                await message.reply("Ini Linknya :")
                 await msg.copy(
                     chat_id=message.from_user.id,
-                    caption=caption,
+                    caption=f"<b>Ini Linknya:</b>\n\n{caption}\n\nSource : https://asupanmu.live",
                     parse_mode=ParseMode.HTML,
                     protect_content=PROTECT_CONTENT,
                     reply_markup=reply_markup,
