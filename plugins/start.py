@@ -112,7 +112,7 @@ async def start_command(client: Bot, message: Message):
             try:
                 await msg.copy(
                     chat_id=message.from_user.id,
-                    caption=f"<b>Ini Linknya:</b>\n\n{caption}\n\nSource : https://asupanmu.live",
+                    caption=f"Ini Linknya:\n\n{caption}\n\nSource : https://asupanmu.live",
                     parse_mode=ParseMode.HTML,
                     protect_content=PROTECT_CONTENT,
                     reply_markup=reply_markup,
