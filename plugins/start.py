@@ -1,4 +1,4 @@
-# (©)Codexbotz
+202# (©)Codexbotz
 # Recode by @mrismanaziz
 # t.me/SharingUserbot & t.me/Lunatic0de
 
@@ -125,7 +125,7 @@ async def start_command(client: Bot, message: Message):
                     reply_markup=reply_markup,
                 )
                 await message.reply(
-                    text="<i>Source : https://asupanmu.live</i>\n\n________________________________",
+                    text="<i>Source : https://bokep2025.us</i>\n\n________________________________",
                     parse_mode=ParseMode.HTML,
                     protect_content=PROTECT_CONTENT,
                     reply_markup=reply_markup,
