@@ -116,7 +116,7 @@ async def start_command(client: Bot, message: Message):
                     protect_content=PROTECT_CONTENT,
                     reply_markup=reply_markup,
                 )
-
+                await asyncio.sleep(0.5)
                 await msg.copy(
                     chat_id=message.from_user.id,
                     caption=caption,
@@ -124,6 +124,7 @@ async def start_command(client: Bot, message: Message):
                     protect_content=PROTECT_CONTENT,
                     reply_markup=reply_markup,
                 )
+                await asyncio.sleep(0.5)
                 await message.reply(
                     text="<i>Source : https://bokep2025.us</i>\n\n________________________________",
                     parse_mode=ParseMode.HTML,
