@@ -66,12 +66,6 @@ def fsub_button(client, message):
             [
                 InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=client.invitelink),
             ],
-            [
-                    InlineKeyboardButton(
-                        text="ᴄᴏʙᴀ ʟᴀɢɪ",
-                        url=f"https://t.me/{client.username}?start={message.command[1]}",
-                    )
-            ],
         ]
         try:
             buttons.append(
