@@ -1,4 +1,4 @@
-202# (©)Codexbotz
+# (©)Codexbotz
 # Recode by @mrismanaziz
 # t.me/SharingUserbot & t.me/Lunatic0de
 
@@ -110,23 +110,9 @@ async def start_command(client: Bot, message: Message):
 
             reply_markup = msg.reply_markup if DISABLE_CHANNEL_BUTTON else None
             try:
-                await message.reply(
-                    text="<b>LINK NYA ADA DI BAWAH !</b>",
-                    parse_mode=ParseMode.HTML,
-                    protect_content=PROTECT_CONTENT,
-                    reply_markup=reply_markup,
-                )
-                await asyncio.sleep(0.5)
                 await msg.copy(
                     chat_id=message.from_user.id,
                     caption=caption,
-                    parse_mode=ParseMode.HTML,
-                    protect_content=PROTECT_CONTENT,
-                    reply_markup=reply_markup,
-                )
-                await asyncio.sleep(0.5)
-                await message.reply(
-                    text="<i>Source : https://bokep2025.us</i>\n\n________________________________",
                     parse_mode=ParseMode.HTML,
                     protect_content=PROTECT_CONTENT,
                     reply_markup=reply_markup,
@@ -164,6 +150,23 @@ async def start_command(client: Bot, message: Message):
     return
 
 
+@Bot.on_message(filters.command("start") & filters.private)
+async def not_joined(client: Bot, message: Message):
+    buttons = fsub_button(client, message)
+    await message.reply(
+        text=FORCE_MSG.format(
+            first=message.from_user.first_name,
+            last=message.from_user.last_name,
+            username=f"@{message.from_user.username}"
+            if message.from_user.username
+            else None,
+            mention=message.from_user.mention,
+            id=message.from_user.id,
+        ),
+        reply_markup=InlineKeyboardMarkup(buttons),
+        quote=True,
+        disable_web_page_preview=True,
+    )
 
 
 @Bot.on_message(filters.command(["users", "stats"]) & filters.user(ADMINS))
